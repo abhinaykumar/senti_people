@@ -1,4 +1,5 @@
-require_relative './lib/get_blog'
+#!/usr/bin/env ruby
+
 require 'sentimental'
 
 #load default Dictionaries
@@ -9,15 +10,22 @@ Sentimental.threshold = 0.0
 
 #create an instance for usage
 analyzer = Sentimental.new(0.0)
+
+# Call Class(GetBlog) from Lib
+require_relative './lib/get_blog'
+
 ak = GetBlog.new()
 blogcontent = ak.getBlogContent()
 # p analyzer.get_sentiment blogcontent.to_s.downcase.split(/[\s\<p>\.]+/)
-p "#{blogcontent}"
+
+# Print Content of the Blog
+# p "#{blogcontent}"
 ################################
 # Positive words: "realize",
 #################################
-#Negative Words found: "ecstatic", "eventually"
+# Negative Words found: "ecstatic", "eventually"
 # "have", "","humble","boundlessness"
+#####################################
 p analyzer.get_sentiment "#{blogcontent}"
 p analyzer.get_score "#{blogcontent}"
 
