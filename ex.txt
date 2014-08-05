@@ -1,0 +1,4 @@
+
+1.0 Awesome
+0.0 Meh
+-1.0 Horrible
