@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/abhinaykumar/senti_people/badges/gpa.svg)](https://codeclimate.com/github/abhinaykumar/senti_people)
+
 Senti_People
 ============
 
